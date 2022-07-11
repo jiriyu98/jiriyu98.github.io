@@ -1,13 +1,13 @@
 # Site settings
-title:          Rain
-description:    "Rain is a simple and clean Jekyll theme with focus on content."
+title:          Jingyi Yu
+description:    "What you know about computing other people will learn."
 url:            https://github.com/inelaah/rain
 
 # Author
 author:
-  name:         Inela Avdic Hukic
-  email:        inelaah@gmail.com
-  url:          https://inelaah.com
+  name:         Jingyi Yu
+  email:        jiriyu98@gmail.com
+  url:          https://github.com/jiriyu98
 
 # Build settings
 markdown:       kramdown
@@ -29,12 +29,12 @@ paginate:       5
 
 # Related posts settings
 related_posts_section:
-  max_count:        5
+  max_count:        100
   min_common_tags:  2
 
 # Links to social media
 social:
-  email: inelaah@gmail.com
-  github: https://github.com/inelaah
-  twitter: https://twitter.com
-  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
+  email: jiriyu98@gmail.com
+  github: https://github.com/jiriyu98
+  twitter: 
+  linkedin: https://www.linkedin.com/in/jiriyu/
