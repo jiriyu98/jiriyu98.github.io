@@ -8,6 +8,9 @@ layout: default
       <div>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
         <h1 class="catalogue-title">{{ post.title }}</h1>
+        {% if post.subtitle %}
+          <h2 class="catalogue-subtitle">{{ post.subtitle }}</h2>
+        {% endif %}
         <div class="catalogue-line"></div>
       </div>
     </a>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "韭菜的羡慕"
+published: false
 ---
 
 最近看到这条[知乎想法](https://www.zhihu.com/pin/1525714443023847424)，觉得非常的有意思。

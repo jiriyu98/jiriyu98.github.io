@@ -30,6 +30,16 @@
     margin: .5rem 0;
   }
 
+  &-subtitle {
+    color: $default-shade;
+    display: block;
+    font-family: $sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: oblique;
+    margin: .5rem 0;
+  }
+
   &-line {
     @include transition(all .3s ease-out);
     border-top: .15rem solid $default-shade;
