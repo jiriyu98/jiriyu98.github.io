@@ -1,11 +1,11 @@
 # Site settings
-title:          Jingyi Yu
+title:          jiriyu98
 description:    "What you know about computing other people will learn."
 url:            https://github.com/inelaah/rain
 
 # Author
 author:
-  name:         Jingyi Yu
+  name:         jiriyu98
   email:        jiriyu98@gmail.com
   url:          https://github.com/jiriyu98
 
@@ -34,7 +34,7 @@ related_posts_section:
 
 # Links to social media
 social:
-  email: jiriyu98@gmail.com
+  # email: jiriyu98@gmail.com
   github: https://github.com/jiriyu98
-  twitter: 
-  linkedin: https://www.linkedin.com/in/jiriyu/
+  # twitter: 
+  # linkedin: https://www.linkedin.com/in/jiriyu/

@@ -2,7 +2,7 @@
 layout: post
 title: "What did I do to improve myself lately?"
 subtitle: "(1) Physical and mental health"
-published: true
+published: false
 ---
 
 As you can see, this post is written in English. To improve my English expression ability, I decided to regularly write English posts, which will be extended to Japanese in the future.
