@@ -1,9 +1,10 @@
 .post {
   padding: 3rem 0;
+  font-size: 18px;
 
   &-info {
     color: $default-tint;
-    font-family: $sans-serif;
+    // font-family: $sans-serif;
     letter-spacing: 0.5px;
     text-align: center;
 
@@ -14,7 +15,7 @@
 
   &-title {
     color: $default-shade;
-    font-family: $sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     font-size: 2.5rem;
     margin: 0 0 1rem 0;
     text-align: center;
@@ -36,8 +37,41 @@
     text-decoration: underline;
   }
 
+  // img {
+  //   margin: 0 auto 0.5rem;
+  // }
+
+  h1:not([class=post-title]) {
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    width: fit-content;
+    border-bottom: 2px LightGrey solid;
+    line-height: 150%;
+  }
+
+  h3 {
+    font-style: italic;
+  }
+
   img {
-    margin: 0 auto 0.5rem;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px #555;
   }
 
   img + em {

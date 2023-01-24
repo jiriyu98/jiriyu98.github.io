@@ -17,14 +17,14 @@
 
   &-time {
     color: $default-tint;
-    font-family: $sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     letter-spacing: .5px;
   }
 
   &-title {
     color: $default-shade;
     display: block;
-    font-family: $sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     font-size: 1.8rem;
     font-weight: 500;
     margin: .5rem 0;
@@ -33,7 +33,7 @@
   &-subtitle {
     color: $default-shade;
     display: block;
-    font-family: $sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     font-size: 0.9rem;
     font-weight: 500;
     font-style: oblique;
