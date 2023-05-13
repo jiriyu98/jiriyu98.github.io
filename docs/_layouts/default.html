@@ -11,6 +11,9 @@
         </a>
         <ul class="nav-social-icons">
           <!-- <li><a target="_blank" href="">中/英</a></li> -->
+          {% if site.social.resume %}
+            <li><a href="{{ site.social.resume }}"><i class="fas fa-file"></i></a></li>
+          {% endif %}
           {% if site.social.email %}
             <li><a target="_blank" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i></a></li>
           {% endif %}
