@@ -17,6 +17,10 @@ sass:
   sass_dir:     _sass
   style:        compressed
 
+# multi-languages
+language_default: zh # default language
+languages_colletction: ["en", "zh", "jp"] # multi-languages
+
 # Gems
 plugins:
   - jekyll-feed
@@ -24,7 +28,7 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
+permalink:      /zh/:year-:month-:day/:title
 paginate:       5
 
 # Related posts settings

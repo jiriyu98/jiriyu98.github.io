@@ -81,19 +81,19 @@ published: true
 ### [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) (2022年初)
 
 2021年年末的时候我决心开始“刷题”，但是许久不碰算法的我需要一门课来回顾一下。我就上了这门各大论坛好评如潮的课程。课程的质量确实不错，作业难度也适中，对熟悉Java和算法是很好的方式。如果对于没有刷题压力的人来说，学习这门课我非常推荐；但是，这门课不教授如何做题，它强调的是理论分析和对高阶算法的介绍。此外比较遗憾的地方就是这门课不提供证书。
-![证书](../images/post/2023-01-24-learning-tracking/Algorithm.png)
+![证书](/images/post/2023-01-24-learning-tracking/Algorithm.png)
 
 ### [Mathematics for Machine Learning: Linear Algebra](https://www.coursera.org/learn/linear-algebra-machine-learning/home)  (2022年上半)
 
 去年第一学期结束前，突然好奇觉得应该补一点线性代数的知识。我期望一个提供直觉和编程练习的课程，这门课非常好的满足了我的需求，内容非常简单，同时提供的直觉十分强烈，介绍了线性代数的本质线性变换，通俗地讲即原来是一条线变换到新的坐标系还是一条线。还是很不错的课程，也是我获得的第一个证书。
 
-![证书](../images/post/2023-01-24-learning-tracking/Linear-Algebra.png)
+![证书](/images/post/2023-01-24-learning-tracking/Linear-Algebra.png)
 
 ### [Fundamentals of Reinforcement Learning](https://www.coursera.org/learn/fundamentals-of-reinforcement-learning) (2022年末)
 
 因为研究的需要，我开始学习强化学习有关的知识。这门课是 \<Reinforcement Learning: An Introduction\> 作者Sutton和他的学生们开的。课程时长其实非常的短，但前提是要求学生们都跟着课程一起读教材。我已经读过教材的Part1(Ch1 ~ Ch8)了，也就是tabular solution method的部分。所以省去了很多时间，看几遍视频就可以上手做作业了。作业难度适中，但帮助我更好地理解了许多算法。此外，看视频的同时我才意识到有许多隐藏在书本文字之下的逻辑和一些算法的实现细节，我猜测也许作者是为了推销课程故意把一些重要的部分放在课程里面了，我也只有上了课之后才了解到其中的奥妙。还是很推荐的。此外，读教材的时候也用了很多金子老师的[问题](https://lecture.ecc.u-tokyo.ac.jp/~ctkaneko/rlbook/)作为参考。
 
-![学习结果](../images/post/2023-01-24-learning-tracking/RLCourse1.png)
+![学习结果](/images/post/2023-01-24-learning-tracking/RLCourse1.png)
 
 ### [Sample-based Learning Methods](https://www.coursera.org/learn/sample-based-learning-methods) (2023年初)
 
@@ -105,7 +105,7 @@ published: true
 
 从大一看到王垠的博客的那时起就向往这门程序语言的入门课很久了，最近花了时间把前六课的作业做完。由于C311没有参考资料，我参考的是十年前的课程存档和[来自IIT教授Venkatesh Choppella的PoPL课程资料](https://faculty.iiit.ac.in/~venkatesh.choppella/popl/)，其中关于Lambda-calculus和CPS变换的部分笔记十分的精彩。前几个月我曾发邮件询问是否有课程前半部分的资料，遗憾的是前半部分不属于Choppella教授的内容，所以没有公开。（似乎私人邮件内容是可以公开的😌)
 
-![回信](../images/post/2023-01-24-learning-tracking/Reply.png)
+![回信](/images/post/2023-01-24-learning-tracking/Reply.png)
 
 ### [MIT Distributed Systems](https://pdos.csail.mit.edu/6.824/index.html) (2022年末)
 
