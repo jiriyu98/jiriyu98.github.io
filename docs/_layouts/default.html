@@ -14,6 +14,9 @@
           {% if site.social.resume %}
             <li><a href="{{ site.social.resume }}"><i class="fas fa-user"></i></a></li>
           {% endif %}
+          {% if site.social.email-public %}
+            <li><a href="mailto:{{ site.social.email-public }}"><i class="fas fa-envelope"></i></i></a></li>
+          {% endif %}
           {% if site.social.email %}
             <li><a target="_blank" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i></a></li>
           {% endif %}
