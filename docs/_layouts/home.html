@@ -3,30 +3,68 @@ layout: default
 ---
 
 <div class="catalogue">
-  {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        {% if post.subtitle %}
-          <h2 class="catalogue-subtitle">{{ post.subtitle }}</h2>
-        {% endif %}
-        <div class="catalogue-line"></div>
-      </div>
-    </a>
-  {% endfor %}
+  <!-- English -->
+  {% if page.url contains "/en" %} {% for post in site.posts %} {% if post.path
+  contains "/en" %}
+  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+    <div>
+      <time datetime="{{ post.date }}" class="catalogue-time"
+        >{{ post.date | date: "%B %d, %Y" }}</time
+      >
+      <h1 class="catalogue-title">{{ post.title }}</h1>
+      {% if post.subtitle %}
+      <h2 class="catalogue-subtitle">{{ post.subtitle }}</h2>
+      {% endif %}
+      <div class="catalogue-line"></div>
+    </div>
+  </a>
+  {% endif %} {% endfor %} {% elsif page.url contains "/jp" %} {% for post in
+  site.posts %} {% if post.path contains "/jp" %}
+  <!-- Japanese -->
+  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+    <div>
+      <time datetime="{{ post.date }}" class="catalogue-time"
+        >{{ post.date | date: "%B %d, %Y" }}</time
+      >
+      <h1 class="catalogue-title">{{ post.title }}</h1>
+      {% if post.subtitle %}
+      <h2 class="catalogue-subtitle">{{ post.subtitle }}</h2>
+      {% endif %}
+      <div class="catalogue-line"></div>
+    </div>
+  </a>
+  {% endif %} {% endfor %} {% else %} {% for post in site.posts %} {% if
+  post.path contains "/zh" %}
+  <!-- Chinese -->
+  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+    <div>
+      <time datetime="{{ post.date }}" class="catalogue-time"
+        >{{ post.date | date: "%B %d, %Y" }}</time
+      >
+      <h1 class="catalogue-title">{{ post.title }}</h1>
+      {% if post.subtitle %}
+      <h2 class="catalogue-subtitle">{{ post.subtitle }}</h2>
+      {% endif %}
+      <div class="catalogue-line"></div>
+    </div>
+  </a>
+  {% endif %} {% endfor %} {% endif %}
 </div>
 
 <div class="pagination">
   <div class="flex-container">
     <div>
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}"><i class="fas fa-angle-left"></i>&nbspNewer</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
+        ><i class="fas fa-angle-left"></i>&nbspNewer</a
+      >
       {% endif %}
     </div>
     <div>
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older&nbsp<i class="fas fa-angle-right"></i></a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+        >Older&nbsp<i class="fas fa-angle-right"></i
+      ></a>
       {% endif %}
     </div>
   </div>

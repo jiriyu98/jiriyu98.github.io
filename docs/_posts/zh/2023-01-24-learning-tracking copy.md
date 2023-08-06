@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "迟到的年度总结"
-published: true
+published: false
 ---
 
 - [游玩](#游玩)

@@ -15,12 +15,13 @@ footer,
 
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
-  overflow: auto;
+  display: flex;
 
   &-container {
     margin: 1rem auto;
     position: relative;
     text-align: center;
+    overflow: visible;
   }
 
   &-title {
@@ -70,7 +71,6 @@ footer,
 
   a {
     color: $default-color;
-    font-family: $sans-serif;
   }
 }
 

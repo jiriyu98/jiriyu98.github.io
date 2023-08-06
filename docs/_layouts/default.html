@@ -1,45 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {% include head.html %}
 
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
+        {% if page.url contains "/en" %}
+        <a href="{{ site.index-en }}">
+          <h2 class="nav-title">{{ site.title-en }}</h2>
+        </a>
+        {% elsif page.url contains "/jp" %}
+        <a href="{{ site.index-jp }}">
+          <h2 class="nav-title">{{ site.title-jp }}</h2>
+        </a>
+        {% else %}
+        <a href="{{ site.index }}">
           <h2 class="nav-title">{{ site.title }}</h2>
         </a>
+        {% endif %}
+
         <ul class="nav-social-icons">
-          <!-- <li><a target="_blank" href="">中/英</a></li> -->
+          <li>
+            <a id="dropdownMenuButton" href="javascript:;"
+              ><i class="fa fa-language"></i
+            ></a>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a
+                href="{{page.url | replace_first: '/jp/', '/zh/' | replace_first: '/en/', '/zh/' }}"
+                >中文</a
+              >
+              <a
+                href="{{page.url | replace_first: '/jp/', '/en/' | replace_first: '/zh/', '/en/' | replace_first: '/', '/en/' | replace_first: '/en/en/', '/en/'}}"
+                >English</a
+              >
+              <a
+                href="{{page.url | replace_first: '/en/', '/jp/' | replace_first: '/zh/', '/jp/' | replace_first: '/', '/jp/' | replace_first: '/jp/jp/', '/jp/'}}"
+                >日本語</a
+              >
+            </div>
+            <script type="text/javascript">
+              var button = document.getElementById("dropdownMenuButton");
+
+              button.addEventListener("click", function () {
+                var menu = document.getElementById("dropdownMenu");
+                if (menu.style.display === "grid") {
+                  menu.style.display = "none";
+                } else {
+                  menu.style.display = "grid";
+                }
+              });
+            </script>
+          </li>
           {% if site.social.resume %}
-            <li><a href="{{ site.social.resume }}"><i class="fas fa-user"></i></a></li>
-          {% endif %}
-          {% if site.social.email-public %}
-            <li><a href="mailto:{{ site.social.email-public }}"><i class="fas fa-envelope"></i></i></a></li>
-          {% endif %}
-          {% if site.social.email %}
-            <li><a target="_blank" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i></a></li>
-          {% endif %}
-          {% if site.social.github %}
-            <li><a target="_blank" href="{{ site.social.github }}"><i class="fab fa-github"></i></a></li>
-          {% endif %}
-          {% if site.social.twitter %}
-            <li><a target="_blank" href="{{ site.social.twitter }}"><i class="fab fa-twitter"></i></a></li>
-          {% endif %}
-          {% if site.social.linkedin %}
-            <li><a target="_blank" href="{{ site.social.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+          <li>
+            {% if page.url contains "/en" %}
+            <a href="{{ site.social.resume-en }}"
+              ><i class="fas fa-user"></i
+            ></a>
+            {% elsif page.url contains "/jp" %}
+            <a href="{{ site.social.resume-jp }}"
+              ><i class="fas fa-user"></i
+            ></a>
+            {% else %}
+            <a href="{{ site.social.resume }}"><i class="fas fa-user"></i></a>
+            {% endif %}
+          </li>
+          {% endif %} {% if site.social.email-public %}
+          <li>
+            <a href="mailto:{{ site.social.email-public }}"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          {% endif %} {% if site.social.email %}
+          <li>
+            <a target="_blank" href="mailto:{{ site.social.email }}"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          {% endif %} {% if site.social.github %}
+          <li>
+            <a target="_blank" href="{{ site.social.github }}"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          {% endif %} {% if site.social.twitter %}
+          <li>
+            <a target="_blank" href="{{ site.social.twitter }}"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          {% endif %} {% if site.social.linkedin %}
+          <li>
+            <a target="_blank" href="{{ site.social.linkedin }}"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
           {% endif %}
         </ul>
       </div>
     </nav>
 
-    <main>
-      {{ content }}
-    </main>
+    <main>{{ content }}</main>
 
     <footer>
       <span>
-        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Powered by Jekyll and <a href="https://github.com/inelaah/rain">Rain</a> theme.
+        &copy;
+        <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{
+        site.author.name }}. Powered by Jekyll and
+        <a href="https://github.com/inelaah/rain">Rain</a> theme.
       </span>
     </footer>
   </body>
