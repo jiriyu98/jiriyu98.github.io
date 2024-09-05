@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信视频链接提取器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>微信视频链接提取器</h1>
+    <input type="text" id="url" placeholder="输入微信文章URL">
+    <button id="extractor" onclick="extractVideoLink()">提取视频链接</button>
+    <button id="clearBtn" onclick="clearFields()">清屏</button>
+    <textarea id="output" rows="10" placeholder="提取的视频链接将显示在这里"></textarea>
+</div>
+
+<script>
+    function extractVideoLink() {
+        let url = document.getElementById('url').value;
+        fetch('https://cors-anywhere.herokuapp.com/' + url)
+            .then(response => response.text())
+            .then(data => {
+                // 正则表达式匹配视频链接 mpvideo.qpic.cn
+                // https://mp.weixin.qq.com/s/qXcKKUBbHsfYdMQP6MOQBw
+                // e.g. https://mpvideo.qpic.cn/0b78ciaagaaawqacil2m25qfaewdamjaaaya.f10002.mp4?dis_k=1c62b24ce42dfbcffeacb90072f2ffb9&dis_t=1725533821&play_scene=10120&auth_info=Vv/bubMDaAVM9artm3UnPQ4rOEdTQi4kPVkqT0MkWytoJ0FSW0kXfz1uQ20vSyse&auth_key=5a6c5b6dcc3de641b02b306ca0a9531f&vid=wxv_1778575337132457985&format_id=10002&support_redirect=0&mmversion=false
+
+                // http://mpvideo.qpic.cn/0bf2peaasaaa2iagjkkm3rqfa6odbf4qacia.f10102.mp4?dis_k=7a86c7c4168cff9afa12a2c74c255c6a\x26amp;dis_t=1725535246\x26amp;play_scene=10120\x26amp;auth_info=eei5xa5gNEUM9+u24n17KHRjOkgXY2tMN2EpSWN5GzJHGSNzfS9LP31sAjZWQ3cL\x26amp;auth_key=494c4cfd7ca998c6526c8e193622fb40
+                let videoRegex = /http:\/\/mpvideo\.qpic\.cn[^']+/g;
+                // let videoRegex = /https[^"]+/g;
+                let videoLinks = data.match(videoRegex);
+                
+                if (videoLinks) {
+                    videoLinks = videoLinks.map(videoLink => {
+                        return videoLink.replace(/\\x26amp;/g, '&');
+                    });
+                }
+
+                if (videoLinks && videoLinks.length > 0) {
+                    document.getElementById('output').value = videoLinks.join("\n\n");
+                } else {
+                    document.getElementById('output').value = "未找到视频链接。";
+                }
+            })
+            .catch(error => {
+                document.getElementById('output').value = error;
+            });
+    }
+
+    function clearFields() {
+        document.getElementById('url').value = '';
+        document.getElementById('output').value = '';
+    }
+</script>
+
+</body>
+</html>
